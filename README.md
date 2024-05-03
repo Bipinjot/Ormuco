@@ -61,3 +61,44 @@ To run the test cases, execute the `run_tests.sh` shell script:
 ./run_tests.sh
 ```
 <img width="613" alt="image" src="https://github.com/Bipinjot/Ormuco/assets/25786623/ab1ede44-be67-45e2-b96a-ad533e7640ab">
+
+# QuestionC: Geo Distributed LRU Cache
+
+This Python project contains implementation of LRU Cache based on the requirements of the question.
+
+#### Simplicity - Integration needs to be dead simple:
+The implementation follows a straightforward approach with a single class GeoLRUCache that encapsulates the functionality of a Geo Distributed LRU cache. The class provides methods for caching, data retrieval, expiration, and data replication across geolocations. Integration with other components or services can be achieved by instantiating and using this class.
+
+#### Resilient to network failures or crashes:
+The code includes error handling in the simulate_data_replication method to catch network failures or crashes during data replication. When a network failure occurs, an exception is raised and handled gracefully, preventing the failure from affecting the cache's functionality.
+
+#### Near real-time replication of data across Geolocation. Writes need to be in real time:
+The simulate_data_replication method simulates near real-time data replication across different geolocations. It updates replicated data structures for each region with a slight delay to mimic network latency, ensuring that data replication occurs almost immediately after a write operation.
+
+#### Data consistency across regions:
+Data consistency across regions is maintained through the replicated_data dictionary within the GeoLRUCache class. Each region has its replicated data structure, ensuring that data remains consistent across regions despite network latencies or failures.
+
+#### Locality of reference, data should almost always be available from the closest region:
+The simulation of data replication across regions implies that data is available in each region's replicated data structure, facilitating quick access and reducing latency for data retrieval.
+
+#### Flexible Schema:
+The implementation allows flexibility in terms of the schema used for caching data. It supports key-value pairs where the keys are strings and the values can be of any type, allowing for a flexible data schema based on application requirements.
+
+#### Cache can expire:
+The expire_cache method in the GeoLRUCache class handles cache expiration by removing items that have exceeded a specified expiration time. This ensures that the cache remains manageable and avoids storing stale data beyond its useful lifespan.
+
+Simulating LRU Cache different geolocations within the scope of a single Python script can be challenging because it typically involves network communication, asynchronous messaging, and potentially complex distributed systems concepts. However, I have create a simplified simulation within the code to mimic the concept of data replication across regions.
+
+## Usage
+
+### Prerequisites
+
+Make sure you have Python3 installed on your system.
+
+### Running the Tests
+
+To run the test cases, execute the `run_tests.sh` shell script:
+```bash
+./run_tests.sh
+```
+<img width="629" alt="image" src="https://github.com/Bipinjot/Ormuco/assets/25786623/0cd0747a-97d0-4e0c-8612-45bb4da822f4">
