@@ -33,7 +33,7 @@ This Python project contains a script to check if two line segments on the x-axi
 
 ### Prerequisites
 
-Make sure you have Python installed on your system.
+Make sure you have Python3 installed on your system.
 
 ### Running the Tests
 
@@ -42,3 +42,22 @@ To run the test cases, execute the `run_tests.sh` shell script:
 ./run_tests.sh
 ```
 <img width="659" alt="image" src="https://github.com/Bipinjot/Ormuco/assets/25786623/1a56ae43-2f13-49f8-a41d-7984957e5361">
+
+
+# QuestionB: String Versin Checker
+
+This Python project contains a script to check if two version string as input and returns whether one is greater than, equal, or less than the other
+
+## Usage
+
+### Prerequisites
+
+Make sure you have Python3 installed on your system.
+
+### Running the Tests
+
+To run the test cases, execute the `run_tests.sh` shell script:
+```bash
+./run_tests.sh
+```
+<img width="613" alt="image" src="https://github.com/Bipinjot/Ormuco/assets/25786623/ab1ede44-be67-45e2-b96a-ad533e7640ab">
