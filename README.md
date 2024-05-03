@@ -40,3 +40,7 @@ Make sure you have Python installed on your system.
 To run the test cases, execute the `run_tests.sh` shell script:
 ```bash
 ./run_tests.sh
+
+### Result
+<img width="651" alt="image" src="https://github.com/Bipinjot/Ormuco/assets/25786623/ea105712-7c72-41c2-b701-40c43db08ed8">
+
